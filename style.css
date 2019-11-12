@@ -744,6 +744,10 @@ textarea {
     display: block;
 }
 
+#menuclose,
+#menuopen {
+    display: none;
+}
 
 
 @media screen {
@@ -781,14 +785,14 @@ textarea {
         background-color: #FFF;
         margin: 6px 16px;
         padding: 4px;
-        border-radius: 5px;
-        color: #000;
+        border-radius: 1px;
+        color: #3a3a3a;
     }
     .menu .tab:hover {
         background-color: #FFF;
         margin: 6px 16px;
         padding: 4px;
-        border-radius: 5px;
+        border-radius: 1px;
         color: #000;
     }
     .menu .tab.selected:hover {
@@ -989,15 +993,58 @@ textarea {
 }
 
 @media only screen and (max-width: 700px) {
+    /*.togglemenu span {
+        display: block;
+        background: white;
+        border-radius: 3px;
+        height: 3px;
+        width: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }*/
+    .togglemenu {
+        color: #fff;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    #menuclose,
+    #menu {
+        display: none;
+    }
+    #menuopen {
 
+        display: block;
+    }
+    #menuopen span {
+        margin-bottom: 4px;
+    }
+    #menuopen span:nth-of-type(1) {
+        margin-top: 15px;
+    }
 
+    #menuclose {
+          color: #d33;
+          background: #fff;
+    }
 
+    /*#menuclose span:nth-of-type(1) {
+        transform: rotate(45deg)
+    }
+    #menuclose span:nth-of-type(2) {
+        transform: rotate(-45deg)
+    }*/
     #detailpubkey,
     #detailpubkeycomp,
     #detailprivhex,
     #detailprivb64 {
         display: contents !important;
         word-wrap: break-word !important;
+    }
+    #detailview {
+        background: #fff;
+        border-radius: 2px;
+        padding: 2px;
     }
     .menu {
         padding: 0;
@@ -1006,6 +1053,19 @@ textarea {
         width: calc(98% - 300px);
 
     }
+
+    .togglemenu {
+        width: 100px;
+        height: 20px;
+        padding: 5px;
+        background: #d33;
+        border-radius: 3px;
+        float: right;
+        z-index: 1000000000;
+        position: relative;
+        right: 0;
+    }
+
     .menu .tab {
         margin: 0;
         min-width: 92%;

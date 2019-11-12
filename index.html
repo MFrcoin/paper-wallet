@@ -6360,7 +6360,7 @@ Bitcoin.Util = {
 	}; // window.Crypto_scrypt
 })();
 	</script>
-    
+
     <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="./style.css">
 </head>
@@ -6389,7 +6389,16 @@ Bitcoin.Util = {
 		<div id="tagline">Open Source JavaScript Client-Side MFCoin Wallet Generator</div>
 		<div id="seedpoolarea"><textarea rows="16" cols="62" id="seedpool"></textarea></div>
 		<div id="testnet"></div>
-		<ul class="menu" id="menu">
+    <div class="togglemenu"  id="menuclose" onclick="document.getElementById('menu').style.display = 'none',
+					document.getElementById('menuclose').style.display = 'none', document.getElementById('menuopen').style.display = 'block';">
+					<span>menu</span>
+		</div>
+    <div class="togglemenu" id="menuopen"  onclick="document.getElementById('menu').style.display = 'block',
+					document.getElementById('menuclose').style.display = 'block', document.getElementById('menuopen').style.display = 'none';">
+					<span>menu</span>
+		</div>
+		<ul class="menu" id="menu" >
+
 			<li class="tab" id="singlewallet" onclick="ninja.tab.select(this);">Single Wallet
 			<li class="tab" id="paperwallet" onclick="ninja.tab.select(this);">Paper Wallet
 			<li class="tab" id="bulkwallet" onclick="ninja.tab.select(this);">Bulk Wallet
